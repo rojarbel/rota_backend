@@ -63,6 +63,9 @@ app.get('/', (req, res) => {
   res.send('Backend çalışıyor!');
 });
 
+app.get('/health', (req, res) => {
+  res.send('ok');
+});
 // MongoDB bağlantısı
 mongoose.connect(process.env.MONGO_URL)
   .then(() => {
